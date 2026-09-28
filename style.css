@@ -1,0 +1,575 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    min-height: 100vh;
+
+    font-family: Arial, Helvetica, sans-serif;
+
+    background:
+        radial-gradient(
+            circle at top,
+            #252e52 0%,
+            #10162b 45%,
+            #070a13 100%
+        );
+
+    color: white;
+}
+
+
+/* =========================
+   COMMON
+========================= */
+
+.hidden {
+    display: none !important;
+}
+
+.screen {
+    min-height: 100vh;
+}
+
+
+/* =========================
+   MAIN MENU
+========================= */
+
+#menuScreen {
+    min-height: 100vh;
+
+    display: flex;
+    flex-direction: column;
+
+    align-items: center;
+
+    padding: 60px 20px;
+}
+
+#menuScreen h1 {
+    font-size: 52px;
+
+    letter-spacing: 3px;
+
+    text-align: center;
+
+    margin-bottom: 10px;
+}
+
+.subtitle {
+    color: #aeb8d2;
+
+    font-size: 20px;
+
+    margin-bottom: 45px;
+}
+
+
+/* GAME GRID */
+
+.game-grid {
+    width: 900px;
+
+    max-width: 95%;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 25px;
+}
+
+
+/* GAME CARD */
+
+.game-card {
+    min-height: 240px;
+
+    background: rgba(23, 30, 54, 0.95);
+
+    border: 1px solid #3c476a;
+
+    border-radius: 22px;
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    align-items: center;
+
+    text-align: center;
+
+    padding: 30px;
+
+    cursor: pointer;
+
+    transition:
+        transform 0.25s,
+        box-shadow 0.25s,
+        border-color 0.25s;
+}
+
+.game-card:hover {
+    transform: translateY(-8px);
+
+    border-color: #7180ff;
+
+    box-shadow:
+        0 20px 45px rgba(0, 0, 0, 0.5);
+}
+
+.game-icon {
+    font-size: 65px;
+
+    margin-bottom: 15px;
+}
+
+.game-card h2 {
+    font-size: 25px;
+
+    margin-bottom: 10px;
+}
+
+.game-card p {
+    color: #aeb8d2;
+
+    font-size: 16px;
+
+    line-height: 1.5;
+}
+
+
+/* =========================
+   GAME SCREEN
+========================= */
+
+.game-screen {
+    min-height: 100vh;
+
+    text-align: center;
+
+    padding: 30px 20px;
+}
+
+.game-screen h1 {
+    font-size: 42px;
+
+    margin: 35px 0 20px;
+}
+
+
+/* =========================
+   TOP BAR
+========================= */
+
+.top-bar {
+    width: 900px;
+
+    max-width: 95%;
+
+    margin: auto;
+
+    padding: 18px 25px;
+
+    background: #151c31;
+
+    border: 1px solid #303b5e;
+
+    border-radius: 15px;
+
+    display: flex;
+
+    justify-content: space-between;
+
+    font-size: 18px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   QUESTION
+========================= */
+
+.question {
+    width: 700px;
+
+    max-width: 90%;
+
+    margin: 35px auto;
+
+    padding: 35px;
+
+    background: #151c31;
+
+    border: 1px solid #303b5e;
+
+    border-radius: 20px;
+
+    font-size: 44px;
+
+    font-weight: bold;
+
+    box-shadow:
+        0 15px 35px rgba(0, 0, 0, 0.3);
+}
+
+
+/* =========================
+   ANSWERS
+========================= */
+
+.answer-grid {
+    width: 600px;
+
+    max-width: 90%;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    gap: 18px;
+}
+
+.answer-btn {
+    padding: 22px;
+
+    background: #252f50;
+
+    color: white;
+
+    border: 1px solid #3b4770;
+
+    border-radius: 15px;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.answer-btn:hover {
+    background: #3d4b78;
+
+    transform: scale(1.03);
+}
+
+
+/* =========================
+   MESSAGE
+========================= */
+
+#quickMessage {
+    height: 45px;
+
+    margin: 20px;
+
+    font-size: 26px;
+
+    font-weight: bold;
+}
+
+
+/* =========================
+   BUTTONS
+========================= */
+
+.menu-btn,
+.start-btn {
+    padding: 14px 26px;
+
+    margin: 8px;
+
+    border: none;
+
+    border-radius: 12px;
+
+    color: white;
+
+    font-size: 16px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    transition: 0.2s;
+}
+
+.menu-btn {
+    background: #303a5a;
+}
+
+.start-btn {
+    background: #4859d6;
+}
+
+.menu-btn:hover,
+.start-btn:hover {
+    transform: scale(1.05);
+}
+
+
+/* =========================
+   GAME OVER
+========================= */
+
+.overlay {
+    position: fixed;
+
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+
+    background: rgba(0, 0, 0, 0.85);
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    z-index: 999;
+}
+
+.game-over-box {
+    width: 420px;
+
+    max-width: 90%;
+
+    padding: 45px;
+
+    background: #151c31;
+
+    border: 1px solid #3c476a;
+
+    border-radius: 25px;
+
+    text-align: center;
+
+    box-shadow:
+        0 25px 60px rgba(0, 0, 0, 0.6);
+}
+
+.game-over-box h1 {
+    color: #ff5c6c;
+
+    font-size: 38px;
+
+    margin-bottom: 20px;
+}
+
+.game-over-box p {
+    font-size: 20px;
+
+    margin: 12px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 700px) {
+
+    #menuScreen h1 {
+        font-size: 36px;
+    }
+
+    .game-grid {
+        grid-template-columns: 1fr;
+    }
+
+    .game-card {
+        min-height: 200px;
+    }
+
+    .top-bar {
+        font-size: 15px;
+    }
+
+    .question {
+        font-size: 34px;
+    }
+
+    .answer-grid {
+        grid-template-columns: 1fr;
+    }
+}
+/* =========================
+   BALLOON POP
+========================= */
+
+.instruction {
+    color: #aeb8d2;
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+}
+
+
+#balloonArea {
+
+    position: relative;
+
+    width: 750px;
+
+    max-width: 95%;
+
+    height: 480px;
+
+    margin: 25px auto;
+
+    background: #11182b;
+
+    border: 1px solid #303b5e;
+
+    border-radius: 25px;
+
+    overflow: hidden;
+
+    box-shadow:
+        0 15px 40px rgba(0, 0, 0, 0.4);
+}
+
+
+.balloon {
+
+    position: absolute;
+
+    width: 140px;
+
+    height: 165px;
+
+    border-radius: 50%;
+
+    background:
+        radial-gradient(
+            circle at 35% 25%,
+            white 0%,
+            #8c98ff 8%,
+            #4c5cff 40%,
+            #202a9c 100%
+        );
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    color: white;
+
+    font-size: 27px;
+
+    font-weight: bold;
+
+    cursor: pointer;
+
+    user-select: none;
+
+    box-shadow:
+        0 10px 25px rgba(0, 0, 0, 0.5);
+
+    transition: transform 0.2s;
+}
+
+
+.balloon:hover {
+
+    transform: scale(1.08);
+
+}
+
+
+.balloon::before {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -10px;
+
+    left: 50%;
+
+    transform: translateX(-50%);
+
+    width: 0;
+
+    height: 0;
+
+    border-left: 8px solid transparent;
+
+    border-right: 8px solid transparent;
+
+    border-top: 15px solid #303fc4;
+
+}
+
+
+.balloon::after {
+
+    content: "";
+
+    position: absolute;
+
+    bottom: -75px;
+
+    left: 50%;
+
+    width: 2px;
+
+    height: 70px;
+
+    background: white;
+
+}
+
+
+#balloonMessage {
+
+    height: 40px;
+
+    font-size: 25px;
+
+    font-weight: bold;
+
+    margin: 5px;
+}
+
+
+/* BALLOON POP ANIMATION */
+
+@keyframes popBalloon {
+
+    0% {
+        transform: scale(1);
+    }
+
+    50% {
+        transform: scale(1.3);
+    }
+
+    100% {
+        transform: scale(0);
+        opacity: 0;
+    }
+}
+
+
+.balloon.pop {
+
+    animation: popBalloon 0.25s forwards;
+
+}

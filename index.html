@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Math Arcade</title>
+
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- ================= MAIN MENU ================= -->
+
+    <div id="menuScreen" class="screen">
+
+        <h1>🎮 MATH ARCADE</h1>
+
+        <p class="subtitle">Choose Your Game</p>
+
+        <div class="game-grid">
+
+            <div class="game-card" onclick="startGame('quick')">
+                <div class="game-icon">⚡</div>
+                <h2>QUICK MATH</h2>
+                <p>Solve calculations before time runs out!</p>
+            </div>
+
+            <div class="game-card" onclick="startGame('balloon')">
+                <div class="game-icon">🎈</div>
+                <h2>BALLOON POP</h2>
+                <p>Pop balloons from smallest to largest.</p>
+            </div>
+
+            <div class="game-card" onclick="startGame('rocket')">
+                <div class="game-icon">🚀</div>
+                <h2>ROCKET TRACK</h2>
+                <p>Build the correct path for the rocket.</p>
+            </div>
+
+            <div class="game-card" onclick="startGame('key')">
+                <div class="game-icon">🔑</div>
+                <h2>KEY FINDER</h2>
+                <p>Find the hidden path to the key!</p>
+            </div>
+
+        </div>
+
+    </div>
+
+
+    <!-- ================= QUICK MATH ================= -->
+
+    <div id="quickScreen" class="screen game-screen hidden">
+
+        <div class="top-bar">
+
+            <span id="quickScore">SCORE: 0</span>
+
+            <span id="quickTimer">TIME: 10</span>
+
+        </div>
+
+        <h1>⚡ QUICK MATH</h1>
+
+        <div id="question" class="question">
+            5 × 5 = ?
+        </div>
+
+        <div id="answers" class="answer-grid"></div>
+
+        <div id="quickMessage"></div>
+
+        <button class="menu-btn" onclick="showMenu()">
+            🏠 MAIN MENU
+        </button>
+
+    </div>
+
+
+    <!-- ================= BALLOON POP ================= -->
+
+    <div id="balloonScreen" class="screen game-screen hidden">
+
+        <div class="top-bar">
+
+            <span id="balloonScore">
+                SCORE: 0
+            </span>
+
+            <span id="balloonLevel">
+                LEVEL: 1
+            </span>
+
+            <span id="balloonTimer">
+                TIME: 10
+            </span>
+
+        </div>
+
+
+        <h1>🎈 BALLOON POP</h1>
+
+        <p class="instruction">
+            POP THE BALLOONS FROM SMALLEST → LARGEST
+        </p>
+
+
+        <div id="balloonArea">
+
+        </div>
+
+
+        <div id="balloonMessage">
+
+        </div>
+
+
+        <button class="menu-btn" onclick="showMenu()">
+            🏠 MAIN MENU
+        </button>
+
+    </div>
+
+
+    <!-- ================= GAME OVER ================= -->
+
+    <div id="gameOverScreen" class="overlay hidden">
+
+        <div class="game-over-box">
+
+            <h1>💀 GAME OVER</h1>
+
+            <p id="gameOverReason"></p>
+
+            <p id="gameOverScore"></p>
+
+
+            <button
+                id="playAgainButton"
+                class="start-btn"
+                onclick="restartCurrentGame()">
+
+                🔄 PLAY AGAIN
+
+            </button>
+
+
+            <button
+                class="menu-btn"
+                onclick="showMenu()">
+
+                🏠 MAIN MENU
+
+            </button>
+
+        </div>
+
+    </div>
+
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
