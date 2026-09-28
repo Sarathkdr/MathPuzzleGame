@@ -3,9 +3,13 @@
 ===================================================== */
 
 * {
+
     margin: 0;
+
     padding: 0;
+
     box-sizing: border-box;
+
 }
 
 
@@ -173,10 +177,6 @@ body {
 }
 
 
-/* =====================================================
-   GAME ICON
-===================================================== */
-
 .game-icon {
 
     font-size: 65px;
@@ -197,7 +197,8 @@ body {
 
 .game-card p {
 
-    color: #aeb8d2;
+    color:
+        #aeb8d2;
 
     font-size: 16px;
 
@@ -269,7 +270,7 @@ body {
 
 
 /* =====================================================
-   QUICK MATH QUESTION
+   QUICK MATH
 ===================================================== */
 
 .question {
@@ -302,10 +303,6 @@ body {
 }
 
 
-/* =====================================================
-   ANSWER GRID
-===================================================== */
-
 .answer-grid {
 
     width: 600px;
@@ -323,10 +320,6 @@ body {
 
 }
 
-
-/* =====================================================
-   ANSWER BUTTON
-===================================================== */
 
 .answer-btn {
 
@@ -363,10 +356,6 @@ body {
 
 }
 
-
-/* =====================================================
-   QUICK MESSAGE
-===================================================== */
 
 #quickMessage {
 
@@ -436,7 +425,7 @@ body {
 
 
 /* =====================================================
-   GAME OVER OVERLAY
+   GAME OVER
 ===================================================== */
 
 .overlay {
@@ -464,10 +453,6 @@ body {
 
 }
 
-
-/* =====================================================
-   GAME OVER BOX
-===================================================== */
 
 .game-over-box {
 
@@ -531,10 +516,6 @@ body {
 }
 
 
-/* =====================================================
-   BALLOON AREA
-===================================================== */
-
 #balloonArea {
 
     position: relative;
@@ -564,10 +545,6 @@ body {
 
 }
 
-
-/* =====================================================
-   BALLOON
-===================================================== */
 
 .balloon {
 
@@ -620,10 +597,6 @@ body {
 }
 
 
-/* =====================================================
-   BALLOON HOVER
-===================================================== */
-
 .balloon:hover {
 
     transform:
@@ -631,10 +604,6 @@ body {
 
 }
 
-
-/* =====================================================
-   BALLOON KNOT
-===================================================== */
 
 .balloon::before {
 
@@ -665,10 +634,6 @@ body {
 }
 
 
-/* =====================================================
-   BALLOON STRING
-===================================================== */
-
 .balloon::after {
 
     content: "";
@@ -689,10 +654,6 @@ body {
 }
 
 
-/* =====================================================
-   BALLOON MESSAGE
-===================================================== */
-
 #balloonMessage {
 
     height: 40px;
@@ -705,10 +666,6 @@ body {
 
 }
 
-
-/* =====================================================
-   BALLOON POP ANIMATION
-===================================================== */
 
 @keyframes popBalloon {
 
@@ -747,21 +704,256 @@ body {
 
 
 /* =====================================================
-   TABLET
+   ROCKET TRACK
 ===================================================== */
 
-@media (max-width: 900px) {
+#rocketArea {
 
-    .game-grid {
+    width: 650px;
 
-        width: 95%;
+    max-width: 95%;
+
+    margin:
+        25px auto;
+
+    padding: 25px;
+
+    background:
+        #11182b;
+
+    border:
+        1px solid #303b5e;
+
+    border-radius: 25px;
+
+    box-shadow:
+        0 15px 40px
+        rgba(0, 0, 0, 0.4);
+
+}
+
+
+#rocketGrid {
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(5, 1fr);
+
+    width: 100%;
+
+    max-width: 500px;
+
+    margin: auto;
+
+}
+
+
+.rocket-cell {
+
+    aspect-ratio: 1 / 1;
+
+    background:
+        #1b2440;
+
+    border:
+        1px solid #3c496d;
+
+    display: flex;
+
+    justify-content: center;
+
+    align-items: center;
+
+    cursor: pointer;
+
+    position: relative;
+
+    transition:
+        background 0.2s;
+
+}
+
+
+.rocket-cell:hover {
+
+    background:
+        #273354;
+
+}
+
+
+.rocket-track {
+
+    width: 75%;
+
+    height: 75%;
+
+    position: relative;
+
+}
+
+
+/* =====================================================
+   TRACK PIECES
+===================================================== */
+
+.track-horizontal::before {
+
+    content: "";
+
+    position: absolute;
+
+    left: 0;
+
+    right: 0;
+
+    top: 50%;
+
+    height: 18px;
+
+    transform:
+        translateY(-50%);
+
+    background:
+        #8894a7;
+
+    border-radius:
+        5px;
+
+}
+
+
+.track-vertical::before {
+
+    content: "";
+
+    position: absolute;
+
+    top: 0;
+
+    bottom: 0;
+
+    left: 50%;
+
+    width: 18px;
+
+    transform:
+        translateX(-50%);
+
+    background:
+        #8894a7;
+
+    border-radius:
+        5px;
+
+}
+
+
+.track-corner::before {
+
+    content: "";
+
+    position: absolute;
+
+    width: 55%;
+
+    height: 55%;
+
+    right: 0;
+
+    bottom: 0;
+
+    border:
+        18px solid #8894a7;
+
+    border-left:
+        none;
+
+    border-top:
+        none;
+
+    border-radius:
+        0 0 25px 0;
+
+}
+
+
+.track-straight {
+
+    transform:
+        rotate(0deg);
+
+}
+
+
+.track-corner {
+
+    transform:
+        rotate(0deg);
+
+}
+
+
+.rocket-start {
+
+    font-size:
+        28px;
+
+    z-index: 5;
+
+}
+
+
+.rocket-end {
+
+    font-size:
+        28px;
+
+    z-index: 5;
+
+}
+
+
+#rocketMessage {
+
+    min-height: 35px;
+
+    font-size: 20px;
+
+    font-weight: bold;
+
+    margin:
+        10px;
+
+}
+
+
+/* =====================================================
+   ROCKET ANIMATION
+===================================================== */
+
+.rocket-moving {
+
+    animation:
+        rocketMove 0.7s linear forwards;
+
+}
+
+
+@keyframes rocketMove {
+
+    from {
+
+        transform:
+            scale(1);
 
     }
 
+    to {
 
-    #balloonArea {
-
-        width: 95%;
+        transform:
+            scale(1.15);
 
     }
 
@@ -775,10 +967,6 @@ body {
 @media (max-width: 700px) {
 
 
-    /* =========================
-       MAIN MENU
-    ========================= */
-
     #menuScreen {
 
         padding:
@@ -789,7 +977,8 @@ body {
 
     #menuScreen h1 {
 
-        font-size: 36px;
+        font-size:
+            36px;
 
         letter-spacing:
             2px;
@@ -799,7 +988,8 @@ body {
 
     .subtitle {
 
-        font-size: 17px;
+        font-size:
+            17px;
 
         margin-bottom:
             30px;
@@ -809,14 +999,14 @@ body {
 
     .game-grid {
 
-        width: 100%;
-
-        max-width: 500px;
+        width:
+            100%;
 
         grid-template-columns:
             1fr;
 
-        gap: 16px;
+        gap:
+            16px;
 
     }
 
@@ -834,31 +1024,27 @@ body {
 
     .game-icon {
 
-        font-size: 50px;
-
-        margin-bottom:
-            8px;
+        font-size:
+            50px;
 
     }
 
 
     .game-card h2 {
 
-        font-size: 21px;
+        font-size:
+            21px;
 
     }
 
 
     .game-card p {
 
-        font-size: 14px;
+        font-size:
+            14px;
 
     }
 
-
-    /* =========================
-       GAME SCREEN
-    ========================= */
 
     .game-screen {
 
@@ -870,7 +1056,8 @@ body {
 
     .game-screen h1 {
 
-        font-size: 30px;
+        font-size:
+            30px;
 
         margin:
             25px 0 15px;
@@ -878,38 +1065,26 @@ body {
     }
 
 
-    /* =========================
-       TOP BAR
-    ========================= */
-
     .top-bar {
 
-        width: 100%;
-
-        max-width:
-            500px;
+        width:
+            100%;
 
         padding:
             13px 8px;
 
-        font-size: 12px;
-
-        border-radius:
+        font-size:
             12px;
 
     }
 
 
-    /* =========================
-       QUICK MATH
-    ========================= */
+    /* QUICK MATH */
 
     .question {
 
-        width: 100%;
-
-        max-width:
-            450px;
+        width:
+            100%;
 
         margin:
             25px auto;
@@ -925,10 +1100,8 @@ body {
 
     .answer-grid {
 
-        width: 100%;
-
-        max-width:
-            450px;
+        width:
+            100%;
 
         grid-template-columns:
             1fr;
@@ -950,9 +1123,7 @@ body {
     }
 
 
-    /* =========================
-       BALLOON INSTRUCTION
-    ========================= */
+    /* BALLOON */
 
     .instruction {
 
@@ -968,10 +1139,6 @@ body {
     }
 
 
-    /* =========================
-       BALLOON AREA
-    ========================= */
-
     #balloonArea {
 
         width:
@@ -983,18 +1150,8 @@ body {
         height:
             500px;
 
-        margin:
-            20px auto;
-
-        border-radius:
-            20px;
-
     }
 
-
-    /* =========================
-       MOBILE BALLOON
-    ========================= */
 
     .balloon {
 
@@ -1007,15 +1164,8 @@ body {
         font-size:
             19px;
 
-        padding:
-            8px;
-
     }
 
-
-    /* =========================
-       FIRST BALLOON
-    ========================= */
 
     .balloon:nth-child(1) {
 
@@ -1027,10 +1177,6 @@ body {
 
     }
 
-
-    /* =========================
-       SECOND BALLOON
-    ========================= */
 
     .balloon:nth-child(2) {
 
@@ -1046,10 +1192,6 @@ body {
     }
 
 
-    /* =========================
-       THIRD BALLOON
-    ========================= */
-
     .balloon:nth-child(3) {
 
         left:
@@ -1064,24 +1206,53 @@ body {
     }
 
 
-    /* =========================
-       BALLOON MESSAGE
-    ========================= */
+    /* ROCKET */
 
-    #balloonMessage {
+    #rocketArea {
 
-        font-size:
-            20px;
+        width:
+            100%;
 
-        height:
-            35px;
+        padding:
+            12px;
 
     }
 
 
-    /* =========================
-       GAME OVER
-    ========================= */
+    #rocketGrid {
+
+        width:
+            100%;
+
+    }
+
+
+    .rocket-cell {
+
+        min-width:
+            0;
+
+    }
+
+
+    .rocket-track {
+
+        width:
+            85%;
+
+        height:
+            85%;
+
+    }
+
+
+    #rocketMessage {
+
+        font-size:
+            16px;
+
+    }
+
 
     .game-over-box {
 
@@ -1109,21 +1280,6 @@ body {
 
     }
 
-
-    /* =========================
-       BUTTONS
-    ========================= */
-
-    .menu-btn,
-    .start-btn {
-
-        padding:
-            12px 20px;
-
-        font-size:
-            14px;
-
-    }
 
 }
 
@@ -1207,4 +1363,181 @@ body {
 
     }
 
+}
+
+/* ============================= */
+/* WEBSITE FOOTER */
+/* ============================= */
+
+footer {
+    width: 100%;
+    margin-top: 30px;
+    padding: 20px 10px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+    flex-wrap: wrap;
+    background: rgba(10, 15, 35, 0.95);
+    border-top: 1px solid rgba(255, 255, 255, 0.15);
+}
+
+footer a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 16px;
+    font-weight: bold;
+    transition: 0.3s;
+}
+
+footer a:hover {
+    color: #00e5ff;
+    text-decoration: underline;
+}
+
+/* ============================= */
+/* ABOUT / CONTACT / PRIVACY PAGES */
+/* ============================= */
+
+.info-page {
+    min-height: 100vh;
+    padding: 40px 20px;
+    background: #0f1428;
+    color: white;
+}
+
+.info-container {
+    max-width: 900px;
+    margin: auto;
+    padding: 35px;
+    background: rgba(30, 40, 75, 0.95);
+    border-radius: 20px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.4);
+}
+
+.info-container h1 {
+    text-align: center;
+    font-size: 38px;
+    margin-bottom: 30px;
+}
+
+.info-container h2 {
+    color: #00e5ff;
+    margin-top: 30px;
+    margin-bottom: 12px;
+}
+
+.info-container p,
+.info-container li {
+    font-size: 17px;
+    line-height: 1.7;
+    color: #e5e7eb;
+}
+
+.info-container ul {
+    padding-left: 25px;
+}
+
+.back-home {
+    display: inline-block;
+    margin-top: 30px;
+    padding: 12px 22px;
+    background: #00e5ff;
+    color: #08101f;
+    text-decoration: none;
+    font-weight: bold;
+    border-radius: 10px;
+    transition: 0.3s;
+}
+
+.back-home:hover {
+    transform: scale(1.05);
+    background: white;
+}
+
+/* ============================= */
+/* CONTACT PAGE */
+/* ============================= */
+
+.contact-box {
+    text-align: center;
+}
+
+.contact-email {
+    display: inline-block;
+    margin-top: 15px;
+    padding: 14px 22px;
+    background: #202b50;
+    color: #00e5ff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+}
+
+.contact-email:hover {
+    background: #293760;
+}
+
+/* ============================= */
+/* MOBILE */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+    footer {
+        gap: 15px;
+        padding: 18px 8px;
+    }
+
+    footer a {
+        font-size: 14px;
+    }
+
+    .info-page {
+        padding: 25px 12px;
+    }
+
+    .info-container {
+        padding: 22px 18px;
+        border-radius: 15px;
+    }
+
+    .info-container h1 {
+        font-size: 28px;
+    }
+
+    .info-container h2 {
+        font-size: 21px;
+    }
+
+    .info-container p,
+    .info-container li {
+        font-size: 15px;
+    }
+}
+
+/* ============================= */
+/* CONTACT LINKS */
+/* ============================= */
+
+.contact-email {
+    display: inline-block;
+    margin: 10px 0 20px;
+    padding: 14px 22px;
+    background: #202b50;
+    color: #00e5ff;
+    text-decoration: none;
+    border-radius: 10px;
+    font-weight: bold;
+    font-size: 16px;
+    transition: 0.3s;
+}
+
+.contact-email:hover {
+    background: #293760;
+    transform: scale(1.03);
+}
+
+.contact-box p {
+    margin-bottom: 12px;
 }
