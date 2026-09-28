@@ -2,87 +2,203 @@
 <html lang="en">
 
 <head>
+
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <meta
+        name="viewport"
+        content="width=device-width, initial-scale=1.0"
+    >
 
     <title>Math Arcade</title>
 
-    <link rel="stylesheet" href="style.css">
+    <link
+        rel="stylesheet"
+        href="style.css"
+    >
+
 </head>
+
 
 <body>
 
-    <!-- ================= MAIN MENU ================= -->
 
-    <div id="menuScreen" class="screen">
+    <!-- =================================================
+         MAIN MENU
+    ================================================= -->
+
+    <div
+        id="menuScreen"
+        class="screen"
+    >
 
         <h1>🎮 MATH ARCADE</h1>
 
-        <p class="subtitle">Choose Your Game</p>
+        <p class="subtitle">
+            Choose Your Game
+        </p>
+
 
         <div class="game-grid">
 
-            <div class="game-card" onclick="startGame('quick')">
-                <div class="game-icon">⚡</div>
-                <h2>QUICK MATH</h2>
-                <p>Solve calculations before time runs out!</p>
+
+            <!-- QUICK MATH -->
+
+            <div
+                class="game-card"
+                onclick="startGame('quick')"
+            >
+
+                <div class="game-icon">
+                    ⚡
+                </div>
+
+                <h2>
+                    QUICK MATH
+                </h2>
+
+                <p>
+                    Solve calculations before time runs out!
+                </p>
+
             </div>
 
-            <div class="game-card" onclick="startGame('balloon')">
-                <div class="game-icon">🎈</div>
-                <h2>BALLOON POP</h2>
-                <p>Pop balloons from smallest to largest.</p>
+
+            <!-- BALLOON -->
+
+            <div
+                class="game-card"
+                onclick="startGame('balloon')"
+            >
+
+                <div class="game-icon">
+                    🎈
+                </div>
+
+                <h2>
+                    BALLOON POP
+                </h2>
+
+                <p>
+                    Pop balloons from smallest to largest.
+                </p>
+
             </div>
 
-            <div class="game-card" onclick="startGame('rocket')">
-                <div class="game-icon">🚀</div>
-                <h2>ROCKET TRACK</h2>
-                <p>Build the correct path for the rocket.</p>
+
+            <!-- ROCKET -->
+
+            <div
+                class="game-card"
+                onclick="startGame('rocket')"
+            >
+
+                <div class="game-icon">
+                    🚀
+                </div>
+
+                <h2>
+                    ROCKET TRACK
+                </h2>
+
+                <p>
+                    Build the correct path for the rocket.
+                </p>
+
             </div>
 
-            <div class="game-card" onclick="startGame('key')">
-                <div class="game-icon">🔑</div>
-                <h2>KEY FINDER</h2>
-                <p>Find the hidden path to the key!</p>
+
+            <!-- KEY FINDER -->
+
+            <div
+                class="game-card"
+                onclick="startGame('key')"
+            >
+
+                <div class="game-icon">
+                    🔑
+                </div>
+
+                <h2>
+                    KEY FINDER
+                </h2>
+
+                <p>
+                    Find the hidden path to the key.
+                </p>
+
             </div>
+
 
         </div>
 
     </div>
 
 
-    <!-- ================= QUICK MATH ================= -->
 
-    <div id="quickScreen" class="screen game-screen hidden">
+    <!-- =================================================
+         QUICK MATH
+    ================================================= -->
+
+    <div
+        id="quickScreen"
+        class="screen game-screen hidden"
+    >
 
         <div class="top-bar">
 
-            <span id="quickScore">SCORE: 0</span>
+            <span id="quickScore">
+                SCORE: 0
+            </span>
 
-            <span id="quickTimer">TIME: 10</span>
+            <span id="quickTimer">
+                TIME: 10
+            </span>
 
         </div>
 
-        <h1>⚡ QUICK MATH</h1>
 
-        <div id="question" class="question">
+        <h1>
+            ⚡ QUICK MATH
+        </h1>
+
+
+        <div
+            id="question"
+            class="question"
+        >
             5 × 5 = ?
         </div>
 
-        <div id="answers" class="answer-grid"></div>
+
+        <div
+            id="answers"
+            class="answer-grid"
+        ></div>
+
 
         <div id="quickMessage"></div>
 
-        <button class="menu-btn" onclick="showMenu()">
+
+        <button
+            class="menu-btn"
+            onclick="showMenu()"
+        >
             🏠 MAIN MENU
         </button>
 
     </div>
 
 
-    <!-- ================= BALLOON POP ================= -->
 
-    <div id="balloonScreen" class="screen game-screen hidden">
+    <!-- =================================================
+         BALLOON POP
+    ================================================= -->
+
+    <div
+        id="balloonScreen"
+        class="screen game-screen hidden"
+    >
 
         <div class="top-bar">
 
@@ -101,39 +217,118 @@
         </div>
 
 
-        <h1>🎈 BALLOON POP</h1>
+        <h1>
+            🎈 BALLOON POP
+        </h1>
+
 
         <p class="instruction">
             POP THE BALLOONS FROM SMALLEST → LARGEST
         </p>
 
 
-        <div id="balloonArea">
-
-        </div>
+        <div id="balloonArea"></div>
 
 
-        <div id="balloonMessage">
-
-        </div>
+        <div id="balloonMessage"></div>
 
 
-        <button class="menu-btn" onclick="showMenu()">
+        <button
+            class="menu-btn"
+            onclick="showMenu()"
+        >
             🏠 MAIN MENU
         </button>
 
     </div>
 
 
-    <!-- ================= GAME OVER ================= -->
 
-    <div id="gameOverScreen" class="overlay hidden">
+    <!-- =================================================
+         ROCKET TRACK
+    ================================================= -->
+
+    <div
+        id="rocketScreen"
+        class="screen game-screen hidden"
+    >
+
+        <div class="top-bar">
+
+            <span id="rocketScore">
+                SCORE: 0
+            </span>
+
+            <span id="rocketLevel">
+                LEVEL: 1
+            </span>
+
+            <span id="rocketTimer">
+                TIME: 120
+            </span>
+
+        </div>
+
+
+        <h1>
+            🚀 ROCKET TRACK
+        </h1>
+
+
+        <p class="instruction">
+            ROTATE THE TRACK PIECES AND BUILD A PATH
+            FROM START → END
+        </p>
+
+
+        <div id="rocketArea">
+
+            <div id="rocketGrid"></div>
+
+        </div>
+
+
+        <div id="rocketMessage"></div>
+
+
+        <button
+            id="rocketStartButton"
+            class="start-btn"
+            onclick="startRocket()"
+        >
+            🚀 START ROCKET
+        </button>
+
+
+        <button
+            class="menu-btn"
+            onclick="showMenu()"
+        >
+            🏠 MAIN MENU
+        </button>
+
+    </div>
+
+
+
+    <!-- =================================================
+         GAME OVER
+    ================================================= -->
+
+    <div
+        id="gameOverScreen"
+        class="overlay hidden"
+    >
 
         <div class="game-over-box">
 
-            <h1>💀 GAME OVER</h1>
+            <h1>
+                💀 GAME OVER
+            </h1>
+
 
             <p id="gameOverReason"></p>
+
 
             <p id="gameOverScore"></p>
 
@@ -141,25 +336,28 @@
             <button
                 id="playAgainButton"
                 class="start-btn"
-                onclick="restartCurrentGame()">
-
+                onclick="restartCurrentGame()"
+            >
                 🔄 PLAY AGAIN
-
             </button>
 
 
             <button
                 class="menu-btn"
-                onclick="showMenu()">
-
+                onclick="showMenu()"
+            >
                 🏠 MAIN MENU
-
             </button>
 
         </div>
 
     </div>
 
+    <footer>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+        <a href="privacy.html">Privacy Policy</a>
+    </footer>
 
     <script src="script.js"></script>
 
