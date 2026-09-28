@@ -1,13 +1,26 @@
+/* =====================================================
+   RESET
+===================================================== */
+
 * {
     margin: 0;
     padding: 0;
     box-sizing: border-box;
 }
 
+
+/* =====================================================
+   BODY
+===================================================== */
+
 body {
+
     min-height: 100vh;
 
-    font-family: Arial, Helvetica, sans-serif;
+    font-family:
+        Arial,
+        Helvetica,
+        sans-serif;
 
     background:
         radial-gradient(
@@ -18,38 +31,53 @@ body {
         );
 
     color: white;
+
 }
 
 
-/* =========================
-   COMMON
-========================= */
+/* =====================================================
+   HIDDEN
+===================================================== */
 
 .hidden {
+
     display: none !important;
+
 }
+
+
+/* =====================================================
+   SCREEN
+===================================================== */
 
 .screen {
+
     min-height: 100vh;
+
 }
 
 
-/* =========================
+/* =====================================================
    MAIN MENU
-========================= */
+===================================================== */
 
 #menuScreen {
+
     min-height: 100vh;
 
     display: flex;
+
     flex-direction: column;
 
     align-items: center;
 
     padding: 60px 20px;
+
 }
 
+
 #menuScreen h1 {
+
     font-size: 52px;
 
     letter-spacing: 3px;
@@ -57,40 +85,54 @@ body {
     text-align: center;
 
     margin-bottom: 10px;
+
 }
 
+
 .subtitle {
+
     color: #aeb8d2;
 
     font-size: 20px;
 
     margin-bottom: 45px;
+
 }
 
 
-/* GAME GRID */
+/* =====================================================
+   GAME GRID
+===================================================== */
 
 .game-grid {
+
     width: 900px;
 
     max-width: 95%;
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        1fr 1fr;
 
     gap: 25px;
+
 }
 
 
-/* GAME CARD */
+/* =====================================================
+   GAME CARD
+===================================================== */
 
 .game-card {
+
     min-height: 240px;
 
-    background: rgba(23, 30, 54, 0.95);
+    background:
+        rgba(23, 30, 54, 0.95);
 
-    border: 1px solid #3c476a;
+    border:
+        1px solid #3c476a;
 
     border-radius: 22px;
 
@@ -112,102 +154,140 @@ body {
         transform 0.25s,
         box-shadow 0.25s,
         border-color 0.25s;
+
 }
+
 
 .game-card:hover {
-    transform: translateY(-8px);
 
-    border-color: #7180ff;
+    transform:
+        translateY(-8px);
+
+    border-color:
+        #7180ff;
 
     box-shadow:
-        0 20px 45px rgba(0, 0, 0, 0.5);
+        0 20px 45px
+        rgba(0, 0, 0, 0.5);
+
 }
 
+
+/* =====================================================
+   GAME ICON
+===================================================== */
+
 .game-icon {
+
     font-size: 65px;
 
     margin-bottom: 15px;
+
 }
 
+
 .game-card h2 {
+
     font-size: 25px;
 
     margin-bottom: 10px;
+
 }
 
+
 .game-card p {
+
     color: #aeb8d2;
 
     font-size: 16px;
 
     line-height: 1.5;
+
 }
 
 
-/* =========================
+/* =====================================================
    GAME SCREEN
-========================= */
+===================================================== */
 
 .game-screen {
+
     min-height: 100vh;
 
     text-align: center;
 
     padding: 30px 20px;
+
 }
+
 
 .game-screen h1 {
+
     font-size: 42px;
 
-    margin: 35px 0 20px;
+    margin:
+        35px 0 20px;
+
 }
 
 
-/* =========================
+/* =====================================================
    TOP BAR
-========================= */
+===================================================== */
 
 .top-bar {
+
     width: 900px;
 
     max-width: 95%;
 
     margin: auto;
 
-    padding: 18px 25px;
+    padding:
+        18px 25px;
 
-    background: #151c31;
+    background:
+        #151c31;
 
-    border: 1px solid #303b5e;
+    border:
+        1px solid #303b5e;
 
     border-radius: 15px;
 
     display: flex;
 
-    justify-content: space-between;
+    justify-content:
+        space-between;
+
+    align-items: center;
 
     font-size: 18px;
 
     font-weight: bold;
+
 }
 
 
-/* =========================
-   QUESTION
-========================= */
+/* =====================================================
+   QUICK MATH QUESTION
+===================================================== */
 
 .question {
+
     width: 700px;
 
     max-width: 90%;
 
-    margin: 35px auto;
+    margin:
+        35px auto;
 
     padding: 35px;
 
-    background: #151c31;
+    background:
+        #151c31;
 
-    border: 1px solid #303b5e;
+    border:
+        1px solid #303b5e;
 
     border-radius: 20px;
 
@@ -216,15 +296,18 @@ body {
     font-weight: bold;
 
     box-shadow:
-        0 15px 35px rgba(0, 0, 0, 0.3);
+        0 15px 35px
+        rgba(0, 0, 0, 0.3);
+
 }
 
 
-/* =========================
-   ANSWERS
-========================= */
+/* =====================================================
+   ANSWER GRID
+===================================================== */
 
 .answer-grid {
+
     width: 600px;
 
     max-width: 90%;
@@ -233,19 +316,29 @@ body {
 
     display: grid;
 
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns:
+        1fr 1fr;
 
     gap: 18px;
+
 }
 
+
+/* =====================================================
+   ANSWER BUTTON
+===================================================== */
+
 .answer-btn {
+
     padding: 22px;
 
-    background: #252f50;
+    background:
+        #252f50;
 
     color: white;
 
-    border: 1px solid #3b4770;
+    border:
+        1px solid #3b4770;
 
     border-radius: 15px;
 
@@ -256,20 +349,27 @@ body {
     cursor: pointer;
 
     transition: 0.2s;
+
 }
+
 
 .answer-btn:hover {
-    background: #3d4b78;
 
-    transform: scale(1.03);
+    background:
+        #3d4b78;
+
+    transform:
+        scale(1.03);
+
 }
 
 
-/* =========================
-   MESSAGE
-========================= */
+/* =====================================================
+   QUICK MESSAGE
+===================================================== */
 
 #quickMessage {
+
     height: 45px;
 
     margin: 20px;
@@ -277,16 +377,19 @@ body {
     font-size: 26px;
 
     font-weight: bold;
+
 }
 
 
-/* =========================
+/* =====================================================
    BUTTONS
-========================= */
+===================================================== */
 
 .menu-btn,
 .start-btn {
-    padding: 14px 26px;
+
+    padding:
+        14px 26px;
 
     margin: 8px;
 
@@ -303,35 +406,53 @@ body {
     cursor: pointer;
 
     transition: 0.2s;
+
 }
+
 
 .menu-btn {
-    background: #303a5a;
+
+    background:
+        #303a5a;
+
 }
 
+
 .start-btn {
-    background: #4859d6;
+
+    background:
+        #4859d6;
+
 }
+
 
 .menu-btn:hover,
 .start-btn:hover {
-    transform: scale(1.05);
+
+    transform:
+        scale(1.05);
+
 }
 
 
-/* =========================
-   GAME OVER
-========================= */
+/* =====================================================
+   GAME OVER OVERLAY
+===================================================== */
 
 .overlay {
+
     position: fixed;
 
     top: 0;
+
     left: 0;
+
     right: 0;
+
     bottom: 0;
 
-    background: rgba(0, 0, 0, 0.85);
+    background:
+        rgba(0, 0, 0, 0.85);
 
     display: flex;
 
@@ -340,84 +461,79 @@ body {
     align-items: center;
 
     z-index: 999;
+
 }
 
+
+/* =====================================================
+   GAME OVER BOX
+===================================================== */
+
 .game-over-box {
+
     width: 420px;
 
     max-width: 90%;
 
     padding: 45px;
 
-    background: #151c31;
+    background:
+        #151c31;
 
-    border: 1px solid #3c476a;
+    border:
+        1px solid #3c476a;
 
     border-radius: 25px;
 
     text-align: center;
 
     box-shadow:
-        0 25px 60px rgba(0, 0, 0, 0.6);
+        0 25px 60px
+        rgba(0, 0, 0, 0.6);
+
 }
 
+
 .game-over-box h1 {
-    color: #ff5c6c;
+
+    color:
+        #ff5c6c;
 
     font-size: 38px;
 
     margin-bottom: 20px;
+
 }
 
+
 .game-over-box p {
+
     font-size: 20px;
 
     margin: 12px;
+
 }
 
 
-/* =========================
-   MOBILE
-========================= */
-
-@media (max-width: 700px) {
-
-    #menuScreen h1 {
-        font-size: 36px;
-    }
-
-    .game-grid {
-        grid-template-columns: 1fr;
-    }
-
-    .game-card {
-        min-height: 200px;
-    }
-
-    .top-bar {
-        font-size: 15px;
-    }
-
-    .question {
-        font-size: 34px;
-    }
-
-    .answer-grid {
-        grid-template-columns: 1fr;
-    }
-}
-/* =========================
+/* =====================================================
    BALLOON POP
-========================= */
+===================================================== */
 
 .instruction {
-    color: #aeb8d2;
+
+    color:
+        #aeb8d2;
 
     font-size: 18px;
 
     margin-bottom: 10px;
+
 }
 
+
+/* =====================================================
+   BALLOON AREA
+===================================================== */
 
 #balloonArea {
 
@@ -429,20 +545,29 @@ body {
 
     height: 480px;
 
-    margin: 25px auto;
+    margin:
+        25px auto;
 
-    background: #11182b;
+    background:
+        #11182b;
 
-    border: 1px solid #303b5e;
+    border:
+        1px solid #303b5e;
 
     border-radius: 25px;
 
     overflow: hidden;
 
     box-shadow:
-        0 15px 40px rgba(0, 0, 0, 0.4);
+        0 15px 40px
+        rgba(0, 0, 0, 0.4);
+
 }
 
+
+/* =====================================================
+   BALLOON
+===================================================== */
 
 .balloon {
 
@@ -471,7 +596,7 @@ body {
 
     color: white;
 
-    font-size: 27px;
+    font-size: 25px;
 
     font-weight: bold;
 
@@ -479,19 +604,37 @@ body {
 
     user-select: none;
 
-    box-shadow:
-        0 10px 25px rgba(0, 0, 0, 0.5);
+    text-align: center;
 
-    transition: transform 0.2s;
+    padding: 10px;
+
+    box-shadow:
+        0 10px 25px
+        rgba(0, 0, 0, 0.5);
+
+    transition:
+        transform 0.2s;
+
+    z-index: 2;
+
 }
 
+
+/* =====================================================
+   BALLOON HOVER
+===================================================== */
 
 .balloon:hover {
 
-    transform: scale(1.08);
+    transform:
+        scale(1.08);
 
 }
 
+
+/* =====================================================
+   BALLOON KNOT
+===================================================== */
 
 .balloon::before {
 
@@ -503,20 +646,28 @@ body {
 
     left: 50%;
 
-    transform: translateX(-50%);
+    transform:
+        translateX(-50%);
 
     width: 0;
 
     height: 0;
 
-    border-left: 8px solid transparent;
+    border-left:
+        8px solid transparent;
 
-    border-right: 8px solid transparent;
+    border-right:
+        8px solid transparent;
 
-    border-top: 15px solid #303fc4;
+    border-top:
+        15px solid #303fc4;
 
 }
 
+
+/* =====================================================
+   BALLOON STRING
+===================================================== */
 
 .balloon::after {
 
@@ -532,10 +683,15 @@ body {
 
     height: 70px;
 
-    background: white;
+    background:
+        white;
 
 }
 
+
+/* =====================================================
+   BALLOON MESSAGE
+===================================================== */
 
 #balloonMessage {
 
@@ -546,30 +702,509 @@ body {
     font-weight: bold;
 
     margin: 5px;
+
 }
 
 
-/* BALLOON POP ANIMATION */
+/* =====================================================
+   BALLOON POP ANIMATION
+===================================================== */
 
 @keyframes popBalloon {
 
     0% {
-        transform: scale(1);
+
+        transform:
+            scale(1);
+
     }
 
     50% {
-        transform: scale(1.3);
+
+        transform:
+            scale(1.3);
+
     }
 
     100% {
-        transform: scale(0);
+
+        transform:
+            scale(0);
+
         opacity: 0;
+
     }
+
 }
 
 
 .balloon.pop {
 
-    animation: popBalloon 0.25s forwards;
+    animation:
+        popBalloon 0.25s forwards;
+
+}
+
+
+/* =====================================================
+   TABLET
+===================================================== */
+
+@media (max-width: 900px) {
+
+    .game-grid {
+
+        width: 95%;
+
+    }
+
+
+    #balloonArea {
+
+        width: 95%;
+
+    }
+
+}
+
+
+/* =====================================================
+   MOBILE
+===================================================== */
+
+@media (max-width: 700px) {
+
+
+    /* =========================
+       MAIN MENU
+    ========================= */
+
+    #menuScreen {
+
+        padding:
+            35px 15px;
+
+    }
+
+
+    #menuScreen h1 {
+
+        font-size: 36px;
+
+        letter-spacing:
+            2px;
+
+    }
+
+
+    .subtitle {
+
+        font-size: 17px;
+
+        margin-bottom:
+            30px;
+
+    }
+
+
+    .game-grid {
+
+        width: 100%;
+
+        max-width: 500px;
+
+        grid-template-columns:
+            1fr;
+
+        gap: 16px;
+
+    }
+
+
+    .game-card {
+
+        min-height:
+            175px;
+
+        padding:
+            20px;
+
+    }
+
+
+    .game-icon {
+
+        font-size: 50px;
+
+        margin-bottom:
+            8px;
+
+    }
+
+
+    .game-card h2 {
+
+        font-size: 21px;
+
+    }
+
+
+    .game-card p {
+
+        font-size: 14px;
+
+    }
+
+
+    /* =========================
+       GAME SCREEN
+    ========================= */
+
+    .game-screen {
+
+        padding:
+            18px 10px;
+
+    }
+
+
+    .game-screen h1 {
+
+        font-size: 30px;
+
+        margin:
+            25px 0 15px;
+
+    }
+
+
+    /* =========================
+       TOP BAR
+    ========================= */
+
+    .top-bar {
+
+        width: 100%;
+
+        max-width:
+            500px;
+
+        padding:
+            13px 8px;
+
+        font-size: 12px;
+
+        border-radius:
+            12px;
+
+    }
+
+
+    /* =========================
+       QUICK MATH
+    ========================= */
+
+    .question {
+
+        width: 100%;
+
+        max-width:
+            450px;
+
+        margin:
+            25px auto;
+
+        padding:
+            25px 15px;
+
+        font-size:
+            34px;
+
+    }
+
+
+    .answer-grid {
+
+        width: 100%;
+
+        max-width:
+            450px;
+
+        grid-template-columns:
+            1fr;
+
+        gap:
+            12px;
+
+    }
+
+
+    .answer-btn {
+
+        padding:
+            17px;
+
+        font-size:
+            22px;
+
+    }
+
+
+    /* =========================
+       BALLOON INSTRUCTION
+    ========================= */
+
+    .instruction {
+
+        font-size:
+            13px;
+
+        padding:
+            0 10px;
+
+        line-height:
+            1.5;
+
+    }
+
+
+    /* =========================
+       BALLOON AREA
+    ========================= */
+
+    #balloonArea {
+
+        width:
+            100%;
+
+        max-width:
+            500px;
+
+        height:
+            500px;
+
+        margin:
+            20px auto;
+
+        border-radius:
+            20px;
+
+    }
+
+
+    /* =========================
+       MOBILE BALLOON
+    ========================= */
+
+    .balloon {
+
+        width:
+            105px;
+
+        height:
+            125px;
+
+        font-size:
+            19px;
+
+        padding:
+            8px;
+
+    }
+
+
+    /* =========================
+       FIRST BALLOON
+    ========================= */
+
+    .balloon:nth-child(1) {
+
+        left:
+            6% !important;
+
+        top:
+            220px !important;
+
+    }
+
+
+    /* =========================
+       SECOND BALLOON
+    ========================= */
+
+    .balloon:nth-child(2) {
+
+        left:
+            50% !important;
+
+        top:
+            45px !important;
+
+        transform:
+            translateX(-50%);
+
+    }
+
+
+    /* =========================
+       THIRD BALLOON
+    ========================= */
+
+    .balloon:nth-child(3) {
+
+        left:
+            auto !important;
+
+        right:
+            6% !important;
+
+        top:
+            220px !important;
+
+    }
+
+
+    /* =========================
+       BALLOON MESSAGE
+    ========================= */
+
+    #balloonMessage {
+
+        font-size:
+            20px;
+
+        height:
+            35px;
+
+    }
+
+
+    /* =========================
+       GAME OVER
+    ========================= */
+
+    .game-over-box {
+
+        width:
+            90%;
+
+        padding:
+            30px 20px;
+
+    }
+
+
+    .game-over-box h1 {
+
+        font-size:
+            30px;
+
+    }
+
+
+    .game-over-box p {
+
+        font-size:
+            17px;
+
+    }
+
+
+    /* =========================
+       BUTTONS
+    ========================= */
+
+    .menu-btn,
+    .start-btn {
+
+        padding:
+            12px 20px;
+
+        font-size:
+            14px;
+
+    }
+
+}
+
+
+/* =====================================================
+   SMALL PHONES
+===================================================== */
+
+@media (max-width: 380px) {
+
+
+    #menuScreen h1 {
+
+        font-size:
+            30px;
+
+    }
+
+
+    .game-card {
+
+        min-height:
+            155px;
+
+    }
+
+
+    .game-icon {
+
+        font-size:
+            42px;
+
+    }
+
+
+    .game-card h2 {
+
+        font-size:
+            18px;
+
+    }
+
+
+    .top-bar {
+
+        font-size:
+            11px;
+
+        padding:
+            11px 5px;
+
+    }
+
+
+    .balloon {
+
+        width:
+            90px;
+
+        height:
+            110px;
+
+        font-size:
+            17px;
+
+    }
+
+
+    .balloon:nth-child(1) {
+
+        left:
+            3% !important;
+
+    }
+
+
+    .balloon:nth-child(3) {
+
+        right:
+            3% !important;
+
+    }
 
 }
